@@ -1,0 +1,18 @@
+import turtle
+import colorsys
+
+t = turtle.Turtle
+turtle.Screen().bgcolor("black")
+turtle.pensize(2)
+turtle.speed(0)
+n = 100
+h = 0
+for i in range(85):
+    c = colorsys.hsv_to_rgb(h, 1, 0.8)
+    h+=1/n
+    turtle.color(c)
+    turtle.right(120)
+    turtle.circle(i*1.2, -180)
+    turtle.circle(i, 180)
+    turtle.circle(i, 60)
+turtle.done()

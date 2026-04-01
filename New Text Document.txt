@@ -1,0 +1,30 @@
+import turtle
+t = turtle.Turtle
+
+screen = turtle.Turtle
+turtle.speed(10)
+for i in range(15):
+    turtle.pencolor("green")
+    turtle.circle(10)
+    turtle.forward(100)
+    turtle.left(515)
+    turtle.forward(120)
+    turtle.circle(10)
+
+    turtle.pencolor("red")
+    turtle.circle(10)
+    turtle.forward(100)
+    turtle.left(515)
+    turtle.forward(120)
+    turtle.circle(10)
+    turtle.width(2)
+
+    turtle.pencolor("blue")
+    turtle.circle(10)
+    turtle.forward(100)
+    turtle.left(515)
+    turtle.forward(120)
+    turtle.circle(10)
+    turtle.width(2)
+
+turtle.done()

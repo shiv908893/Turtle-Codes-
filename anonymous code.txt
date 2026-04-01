@@ -1,0 +1,33 @@
+
+import turtle
+from random import randint
+
+#turtle initialization
+t = turtle.Turtle()
+t.hideturtle()
+t.speed(0)
+turtle.delay(0)
+
+#L-system set up
+start = "fx"
+rules = {'x':'x+yf+','y':'-fx-y','f':'f','+':'+','-':'-'}
+
+while True:
+
+    #makes a random color
+    t.pencolor('#%02x%02x%02x' % (randint(0,255),randint(0,255),randint(0,255)))
+
+    #makes a new generation of the L-system
+    new = ""
+    for i in start:
+        new += rules[i]
+
+    #applies the rules from text to graphics
+    for i in new:
+        if i == '+':
+            t.right(90)
+        elif i == '-':
+            t.left(90)
+        elif i == 'f':
+            t.forward(5)
+    start = new

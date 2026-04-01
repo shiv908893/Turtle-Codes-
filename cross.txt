@@ -1,0 +1,44 @@
+import turtle
+t= turtle.Turtle()
+i =5
+
+while i<62:
+    turtle.color("green","black")
+    turtle.speed(11)
+    turtle.begin_fill()
+
+    turtle.forward(100+i)
+    turtle.left(45)
+    turtle.forward(50)
+    turtle.left(-135)
+    turtle.forward(100)
+    turtle.left(-135)
+    turtle.forward(50)
+    turtle.left(45)
+    turtle.forward(100+i)
+    turtle.left(90)
+    i+=5
+
+    turtle.end_fill()
+
+turtle.color("blue")
+turtle.left(-80)
+turtle.forward(15)
+turtle.left(-90)
+turtle.forward(15)
+turtle.left(80)
+
+while i<150:
+    turtle.circle(50+i)
+    turtle.circle(-40-i)
+    i+=5
+
+turtle.left(90)
+
+while i<150:
+    turtle.circle(50+i)
+    turtle.circle(-50-i)
+    i+=5
+
+
+turtle.done()
